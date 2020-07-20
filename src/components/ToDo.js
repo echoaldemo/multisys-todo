@@ -1,9 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import allActions from "../redux/actions";
 
 const Todo = () => {
   const tasks = useSelector((state) => state.tasks);
-  console.log(tasks);
+  const input = useSelector((state) => state.input);
+  const dispatch = useDispatch();
   return (
     <div className="main">
       <div className="container">
@@ -15,6 +17,10 @@ const Todo = () => {
               width="485px"
               className="form-control"
               placeholder="Enter a task for today"
+              onChange={(e) =>
+                dispatch(allActions.inputActions.setTask(e.target.value))
+              }
+              value={input.task}
             />
             <button className="btn btn-primary" type="submit">
               Add Task
