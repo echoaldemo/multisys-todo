@@ -32,3 +32,12 @@ code {
 .sub {
   color: #356975;
 }
+
+.input-container {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  width: 485px;
+  margin-right: 1%;
+  grid-gap: 15px;
+  padding: 15px 0px 30px;
+}

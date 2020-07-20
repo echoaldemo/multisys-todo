@@ -10,18 +10,10 @@ const Todo = () => {
           <form className="input-container">
             <input
               width="485px"
-              //   onChange={(e) =>
-              //     dispatch(allActions.inputActions.setTask(e.target.value))
-              //   }
-              //   value={input.task}
               className="form-control"
               placeholder="Enter a task for today"
             />
-            <button
-              //disabled={input.task.length === 0}
-              className="btn btn-primary"
-              type="submit"
-            >
+            <button className="btn btn-primary" type="submit">
               Add Task
             </button>
           </form>
