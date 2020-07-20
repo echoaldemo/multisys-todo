@@ -33,7 +33,7 @@ const Todo = () => {
 
   return (
     <div className="main">
-      <div className="container">
+      <div className="head">
         <h3 className="header">To Do App</h3>
         <h6 className="sub">by Jericho Aldemo</h6>
         {/* INPUT START */}
@@ -48,12 +48,18 @@ const Todo = () => {
               }
               value={input.task}
             />
-            <button className="btn btn-primary" type="submit">
+            <button
+              disabled={input.task.length === 0}
+              className="btn btn-primary"
+              type="submit"
+            >
               {input.edit ? "Update" : "Add Task"}
             </button>
           </form>
         </div>
-        {/* INPUT END */}
+      </div>
+      {/* INPUT END */}
+      <div className="container">
         {/* TODO LIST START */}
         <table className="table table-hover">
           <thead>
