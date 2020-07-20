@@ -23,6 +23,14 @@ const Todo = () => {
     dispatch(allActions.inputActions.clear());
   };
 
+  const rowClass = (task) => {
+    return input.selected && task.id === input.selected.id
+      ? "table-info"
+      : task.status
+      ? "table-success"
+      : "table-secondary";
+  };
+
   return (
     <div className="main">
       <div className="container">
@@ -62,7 +70,7 @@ const Todo = () => {
           <tbody>
             {tasks.length > 0 &&
               tasks.map((task) => (
-                <tr key={task.id} className="table-secondary">
+                <tr key={task.id} className={rowClass(task)}>
                   <th scope="row">
                     <input
                       type="checkbox"
