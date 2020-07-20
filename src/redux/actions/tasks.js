@@ -12,7 +12,15 @@ const update = (payload) => {
   };
 };
 
+const remove = (payload) => {
+  return {
+    type: "REMOVE",
+    payload,
+  };
+};
+
 export default {
   add,
   update,
+  remove,
 };

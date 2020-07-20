@@ -20,6 +20,8 @@ const taskReducer = (state = initialState, action) => {
       temp.find((item) => item.id === action.payload.id)[action.payload.prop] =
         action.payload.value;
       return temp;
+    case "REMOVE":
+      return [...state].filter((item) => item.id !== action.payload);
     default:
       return state;
   }

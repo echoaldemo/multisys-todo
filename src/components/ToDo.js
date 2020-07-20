@@ -97,7 +97,15 @@ const Todo = () => {
                           ? "Cancel"
                           : "Edit"}
                       </button>
-                      <button className="btn btn-danger wdth">Delete</button>
+                      <button
+                        onClick={() => {
+                          dispatch(allActions.taskActions.remove(task.id));
+                          dispatch(allActions.inputActions.clear());
+                        }}
+                        className="btn btn-danger wdth"
+                      >
+                        Delete
+                      </button>
                     </div>
                   </td>
                 </tr>
