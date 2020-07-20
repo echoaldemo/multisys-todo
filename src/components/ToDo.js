@@ -33,7 +33,7 @@ const Todo = () => {
 
   return (
     <div className="main">
-      <div className="head">
+      <div className="head container">
         <h3 className="header">To Do App</h3>
         <h6 className="sub">by Jericho Aldemo</h6>
         {/* INPUT START */}
