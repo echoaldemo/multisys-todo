@@ -9,7 +9,17 @@ const Todo = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    dispatch(allActions.taskActions.add(input.task));
+    if (input.edit) {
+      dispatch(
+        allActions.taskActions.update({
+          id: input.selected.id,
+          prop: "desc",
+          value: input.task,
+        })
+      );
+    } else {
+      dispatch(allActions.taskActions.add(input.task));
+    }
     dispatch(allActions.inputActions.clear());
   };
 
@@ -31,7 +41,7 @@ const Todo = () => {
               value={input.task}
             />
             <button className="btn btn-primary" type="submit">
-              Add Task
+              {input.edit ? "Update" : "Add Task"}
             </button>
           </form>
         </div>
@@ -73,7 +83,14 @@ const Todo = () => {
                   </td>
                   <td className="center">
                     <div className="btn-grid">
-                      <button className="btn btn-warning wdth">Edit</button>
+                      <button
+                        onClick={() =>
+                          dispatch(allActions.inputActions.editSelected(task))
+                        }
+                        className="btn btn-warning wdth"
+                      >
+                        Edit
+                      </button>
                       <button className="btn btn-danger wdth">Delete</button>
                     </div>
                   </td>

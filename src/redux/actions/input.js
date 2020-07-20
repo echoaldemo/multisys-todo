@@ -4,12 +4,22 @@ const setTask = (payload) => {
     payload,
   };
 };
+
 const clear = () => {
   return {
     type: "CLEAR",
   };
 };
+
+const editSelected = (payload) => {
+  return {
+    type: "EDIT_TASK",
+    payload,
+  };
+};
+
 export default {
   setTask,
   clear,
+  editSelected,
 };
