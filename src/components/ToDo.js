@@ -85,11 +85,17 @@ const Todo = () => {
                     <div className="btn-grid">
                       <button
                         onClick={() =>
-                          dispatch(allActions.inputActions.editSelected(task))
+                          input.edit && input.selected.id === task.id
+                            ? dispatch(allActions.inputActions.clear())
+                            : dispatch(
+                                allActions.inputActions.editSelected(task)
+                              )
                         }
                         className="btn btn-warning wdth"
                       >
-                        Edit
+                        {input.edit && input.selected.id === task.id
+                          ? "Cancel"
+                          : "Edit"}
                       </button>
                       <button className="btn btn-danger wdth">Delete</button>
                     </div>
