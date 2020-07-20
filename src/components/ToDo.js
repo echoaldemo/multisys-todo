@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Todo = () => {
+  const tasks = useSelector((state) => state.tasks);
+  console.log(tasks);
   return (
     <div className="main">
       <div className="container">
