@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/multisys-todo/static/css/main.dd7b5645.chunk.css",
+    "main.js": "/multisys-todo/static/js/main.4c0bc0d7.chunk.js",
+    "main.js.map": "/multisys-todo/static/js/main.4c0bc0d7.chunk.js.map",
+    "runtime-main.js": "/multisys-todo/static/js/runtime-main.40af03c0.js",
+    "runtime-main.js.map": "/multisys-todo/static/js/runtime-main.40af03c0.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/multisys-todo/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.fd2194fa.chunk.js": "/multisys-todo/static/js/2.fd2194fa.chunk.js",
+    "static/js/2.fd2194fa.chunk.js.map": "/multisys-todo/static/js/2.fd2194fa.chunk.js.map",
+    "index.html": "/multisys-todo/index.html",
+    "precache-manifest.4ceef4404cc18208d6785bebd517aaa6.js": "/multisys-todo/precache-manifest.4ceef4404cc18208d6785bebd517aaa6.js",
+    "service-worker.js": "/multisys-todo/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/multisys-todo/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.dd7b5645.chunk.css.map": "/multisys-todo/static/css/main.dd7b5645.chunk.css.map",
+    "static/js/2.fd2194fa.chunk.js.LICENSE.txt": "/multisys-todo/static/js/2.fd2194fa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40af03c0.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.fd2194fa.chunk.js",
+    "static/css/main.dd7b5645.chunk.css",
+    "static/js/main.4c0bc0d7.chunk.js"
+  ]
+}
