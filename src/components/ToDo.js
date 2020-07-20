@@ -54,9 +54,23 @@ const Todo = () => {
               tasks.map((task) => (
                 <tr key={task.id} className="table-secondary">
                   <th scope="row">
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      checked={task.status}
+                      onChange={() =>
+                        dispatch(
+                          allActions.taskActions.update({
+                            id: task.id,
+                            prop: "status",
+                            value: !task.status,
+                          })
+                        )
+                      }
+                    />
                   </th>
-                  <td>{task.desc}</td>
+                  <td className={task.status ? "strike" : "basic"}>
+                    {task.desc}
+                  </td>
                   <td className="center">
                     <div className="btn-grid">
                       <button className="btn btn-warning wdth">Edit</button>

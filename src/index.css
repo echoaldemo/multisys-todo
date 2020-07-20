@@ -11,7 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .main {
   height: 100vh;
   background: #002644;
@@ -24,15 +23,12 @@ code {
   align-items: center;
   flex-direction: column;
 }
-
 .header {
   color: #72c3e2;
 }
-
 .sub {
   color: #356975;
 }
-
 .input-container {
   display: grid;
   grid-template-columns: 1fr 100px;
@@ -41,19 +37,22 @@ code {
   grid-gap: 15px;
   padding: 15px 0px 30px;
 }
-
 .white {
   color: #ffffffa6;
 }
-
 .center {
   text-align: center;
 }
-
 .btn-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 30%;
   margin: auto;
   grid-gap: 20px;
+}
+.strike {
+  text-decoration: line-through;
+}
+.basic {
+  text-decoration: none;
 }

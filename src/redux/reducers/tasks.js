@@ -15,6 +15,11 @@ const taskReducer = (state = initialState, action) => {
         status: false,
       };
       return [newTask, ...state];
+    case "UPDATE":
+      const temp = [...state];
+      temp.find((item) => item.id === action.payload.id)[action.payload.prop] =
+        action.payload.value;
+      return temp;
     default:
       return state;
   }
