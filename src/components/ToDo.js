@@ -10,6 +10,7 @@ const Todo = () => {
   const submit = (e) => {
     e.preventDefault();
     dispatch(allActions.taskActions.add(input.task));
+    dispatch(allActions.inputActions.clear());
   };
 
   return (
